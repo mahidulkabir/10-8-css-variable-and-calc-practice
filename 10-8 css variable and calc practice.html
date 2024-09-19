@@ -6,8 +6,27 @@
     <title>10-8 css variable and calc practice</title>
     <style>
     :root{
-        --main-clr:steelblue;
-        --secondary-clr:red;
+        --main-clr:rgb(62, 82, 99);
+        --secondary-clr:rgb(168, 61, 61);
+        --background-clr:rgba(137, 43, 226, 0.171);
+    }
+    h2{
+        color: var(--main-clr);
+        background: var(--background-clr);
+    }
+    p{
+        color: var(--secondary-clr);
+        background:var(--background-clr);
+    }
+    .nav{
+        background-color: brown;
+    }
+    .main-section{
+        background-color: aqua;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 200px  calc(100% - 200px);
     }
     </style>
 </head>
@@ -16,5 +35,12 @@
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, libero sunt amet distinctio incidunt tempore cupiditate. Itaque facilis quidem id?</p>
         <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique et laboriosam eum aut voluptas fugit, doloremque ipsam eius, quam vel aliquid nemo. Reprehenderit quia voluptates dolore deleniti aliquid facilis corporis nam dignissimos sed pariatur labore neque ad earum quibusdam, in aspernatur esse, ratione delectus ipsa atque alias commodi eum at?</p>
+
+
+
+        <div class="container">
+            <div class="nav">Nav Bar</div>
+            <div class="main-section">Main section </div>
+        </div>
 </body>
 </html>
